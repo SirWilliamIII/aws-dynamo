@@ -1,33 +1,30 @@
-<div class="jumbotron">
-    <div class="container">
-        <h1>Welcome to Node.js with Handlebars</h1>
-        <p>This demonstrates a form with Node.js</p>
-    </div>
-</div>
-
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <form action="/" method="post" role="form" enctype="application/x-www-form-urlencoded">
-                <legend>Enter Information Here</legend>
-
-                <div class="form-group">
-                    <label for="title">City</label>
-                    <input type="text" class="form-control" name="title" id="title" placeholder="Title">
-                </div>
-
-                <div class="form-group">
-                    <label for="country">Country</label>
-                    <input type="text" class="form-control" name="country" id="country" placeholder="Country">
-                </div>
-
-                {{!-- <div class="form-group">
-                    <label for="date">Date Visited</label>
-                    <input type="text" class="form-control" name="date" id="date" placeholder="Date Visited">
-                </div> --}}
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+    <section class="hero is-info is-bold">
+        <div class="hero-body">
+            <h1 class="title">DYNAMODB CITY ADDER</h1>
+            <h2 class="subtitle">This adds city to table 'Place'</h2>
         </div>
+    </section>
+
+
+    <div class="section">
+        <form action="/" method="post" role="form" enctype="application/x-www-form-urlencoded">
+            <div class="field">
+                <label for="title">City</label>
+                <div class="control">
+                    <input type="text" class="input" name="title" id="title" placeholder="Title">
+                </div>
+            </div>
+            <div class="field">
+                <label for="country">Country</label>
+                <div class="control">
+                    <input type="text" class="input" name="country" id="country" placeholder="Country">
+                </div>
+            </div>
+            <div class="control">
+                <button type="submit" class="button is-info">Add Place!</button>
+            </div>
+        </form>
     </div>
+
 </div>
