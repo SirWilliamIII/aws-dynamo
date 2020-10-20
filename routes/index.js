@@ -1,6 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
+
+const queries = require("../db/queries")
+const addEntry = queries.addEntry
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', {
@@ -10,14 +15,17 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res) {
     const body = req.body
-
     const res_body = {
-        first_name: body.first_name,
-        last_name: body.last_name,
-        email: body.email
+        title: body.title,
+        country: body.country
+
     }
 
-    res.render('welcome', res_body)
+    if (res_body.title && res_body.country) {
+        addEntry('place', res_body.title, res_body.country)
+    }
+
+    res.render('confirm', res_body)
 })
 
 module.exports = router
