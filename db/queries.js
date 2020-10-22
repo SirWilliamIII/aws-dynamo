@@ -6,6 +6,8 @@ AWS.config.update({
 
 const DynamoDB = new AWS.DynamoDB()
 
+
+//  CREATE TABLE
 function createTable(tableName) {
     const params = {
         TableName: tableName,
@@ -31,6 +33,10 @@ function createTable(tableName) {
         }
     })
 }
+
+
+///////////////////////////////////////
+
 
 function getEntryByKey(tableName, key) {
     const params = {

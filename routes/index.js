@@ -9,7 +9,7 @@ const addEntry = queries.addEntry
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', {
-        title: 'Title'
+        title: 'City Adder'
     })
 })
 
@@ -18,7 +18,6 @@ router.post('/', function(req, res) {
     const res_body = {
         title: body.title,
         country: body.country
-
     }
 
     if (res_body.title && res_body.country) {
